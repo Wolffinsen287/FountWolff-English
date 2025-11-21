@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FountWolff English
 
 A professional website for FountWolff English - Online English classes for career professionals.
@@ -95,3 +96,7 @@ The contact form currently displays a success message. To integrate with a backe
 ## Contact
 
 For questions about the website or classes, visit [https://fountwolffenglish.com](https://fountwolffenglish.com)
+=======
+# FountWolff-English
+FountWolff page but better
+>>>>>>> 34400156e50e35da08dd843ee501f2ba0e7a8b71
