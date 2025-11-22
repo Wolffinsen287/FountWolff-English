@@ -25,6 +25,7 @@ body {
     color: var(--text-dark);
     background-color: var(--background-dark);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -202,11 +203,7 @@ body {
     color: var(--white);
     animation: fadeInUp 1s ease;
     max-width: 1000px;
-    padding: 3rem 1rem;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(50, 130, 184, 0.3);
+    padding: 2rem 1rem;
 }
 
 @keyframes fadeInUp {
