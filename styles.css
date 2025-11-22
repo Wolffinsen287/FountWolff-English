@@ -147,7 +147,37 @@ body {
     position: relative;
     margin-top: 70px;
     padding: 2rem 0;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(50, 130, 184, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(15, 76, 117, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, 30px) scale(1.1); }
 }
 
 .hero-overlay {
@@ -157,7 +187,13 @@ body {
     right: 0;
     bottom: 0;
     background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.5;
+    opacity: 0.6;
+    animation: backgroundScroll 20s linear infinite;
+}
+
+@keyframes backgroundScroll {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
 }
 
 .hero-content {
@@ -165,13 +201,37 @@ body {
     z-index: 1;
     color: var(--white);
     animation: fadeInUp 1s ease;
+    max-width: 1000px;
+    padding: 3rem 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(50, 130, 184, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+    animation: titlePulse 2s ease-in-out infinite;
+}
+
+@keyframes titlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
 }
 
 .hero-slogan {
@@ -180,23 +240,32 @@ body {
     font-style: italic;
     margin-bottom: 1rem;
     color: var(--accent-color);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 20px rgba(50, 130, 184, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.3);
     letter-spacing: 1px;
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 20px rgba(50, 130, 184, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.3); }
+    50% { text-shadow: 0 0 30px rgba(50, 130, 184, 0.8), 1px 1px 2px rgba(0, 0, 0, 0.3); }
 }
 
 .hero-subtitle {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
 }
 
 .hero-text {
     font-size: 1.3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons */
@@ -215,11 +284,15 @@ body {
 .btn-primary {
     background: var(--accent-color);
     color: var(--white);
+    box-shadow: 0 5px 20px rgba(50, 130, 184, 0.4);
+    font-size: 1.1rem;
+    padding: 1.2rem 3rem;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(50, 130, 184, 0.6);
+    background: var(--secondary-color);
 }
 
 .btn-secondary {
@@ -643,17 +716,7 @@ section {
     letter-spacing: 0.5px;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* Animations are defined in hero section */
 
 /* Responsive Design */
 @media (max-width: 768px) {
