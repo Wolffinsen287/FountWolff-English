@@ -298,6 +298,70 @@ section {
     color: var(--accent-color);
 }
 
+/* Method Section */
+.method {
+    background: var(--background-dark);
+}
+
+.method-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.method-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.method-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.method-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid rgba(50, 130, 184, 0.3);
+}
+
+.method-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(50, 130, 184, 0.4);
+    border-color: var(--accent-color);
+}
+
+.method-number {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0 auto 1.5rem;
+}
+
+.method-card h3 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.method-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
 /* Classes Section */
 .classes {
     background: var(--background-dark);
@@ -424,6 +488,11 @@ section {
 /* Contact Section */
 .contact {
     background: var(--background-dark);
+}
+
+.contact-content-center {
+    display: flex;
+    justify-content: center;
 }
 
 .contact-content {
