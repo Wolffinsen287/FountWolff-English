@@ -1,102 +1,50 @@
-<<<<<<< HEAD
-# FountWolff English
+Fountwolff English — Design System
+v1 · Color, type, and buttons — Apple's restraint, Framework's modular confidence, Discord's brand-forward buttons.
 
-A professional website for FountWolff English - Online English classes for career professionals.
+Toggle dark mode
+Color palette
+Two neutrals + one warm neutral, one primary brand color, one accent for labels/tags, one secondary text/border tone.
 
-## About
+Ink
+#14171C
+Primary text, dark surfaces
+Cloud
+#FFFFFF
+Primary background, light mode
+Mist
+#F2F3F5
+Cards, secondary surfaces
+Fount Blue
+#3B5BFF
+Primary actions, links, focus
+Ember
+#FF7A45
+Tags, level labels, highlights
+Slate
+#6B7280
+Secondary text, borders, disabled
+Dark mode: Ink → background · Mist → #1E2128 elevated surface · Fount Blue → #6E86FF (brightened for contrast) · Ember → #FF8F64
 
-FountWolff English offers advanced English instruction tailored to professionals looking to enhance their careers. Founded and taught by Daniel Wolff, a former New York City legal proofreader with a solid educational background in pedagogy.
+Typography
+Two families, clearly distinct roles — no third face needed except a mono accent for labels.
 
-## Features
+Headline — Plus Jakarta Sans, 700, -0.01em tracking
+Speak with confidence.
+Body — Inter, 400/500/600, 16px / 1.55 line-height
+Small-group Business English classes for professionals, taught live by a native-speaking teacher. Fixed weekly slot, real practice, at a fraction of the cost of private lessons.
+Accent / labels — IBM Plex Mono, 500, uppercase, letter-spaced
+MON & WED · 7:00 PM — MEETINGS & NEGOTIATION
+Buttons
+10px radius — rounder than Framework's flat corners, short of Apple's full pill. Weighted like Discord's, restrained in color use like Apple's.
 
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI**: Clean, professional design with smooth animations
-- **Interactive Navigation**: Smooth scrolling and mobile-friendly menu
-- **Contact Form**: Integrated contact form with validation
-- **Multiple Class Options**: Group classes, one-on-one lessons, and business English courses
+Join a cohort
+See pricing
+How it works →
+Cohort full
+INTERMEDIATE
+Primary — fill Fount Blue, white text, hover: brightness +10% & lift 1px, active: brightness −5% & settle
+Secondary — outline in text color, hover: fills solid
+Ghost — text-only in Fount Blue, hover: underline
+Disabled — Mist fill, Slate text, no pointer
+Tag/label — Ember outline, mono type, for level/category badges only
 
-## File Structure
-
-```
-fountwolff_english/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styling
-├── script.js           # JavaScript functionality
-├── assets/             # Images and media files
-│   └── teacher-photo.jpg  # Add teacher photo here
-└── README.md           # This file
-```
-
-## Setup Instructions
-
-1. **Add Images**: Place the teacher photo and any other images in the `assets/` folder
-   - Recommended: `teacher-photo.jpg` for the About section
-
-2. **Open the Website**: Simply open `index.html` in a web browser
-
-3. **Customize Content**: 
-   - Edit contact information in `index.html`
-   - Adjust colors in `styles.css` (see CSS variables at the top)
-   - Modify class descriptions as needed
-
-## Customization
-
-### Colors
-The color scheme can be easily modified in `styles.css` by changing the CSS variables:
-
-```css
-:root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    /* ... other colors */
-}
-```
-
-### Adding New Sections
-To add a new section, follow the existing pattern in `index.html`:
-
-1. Add a `<section>` with a unique ID
-2. Include it in the navigation menu
-3. Style it in `styles.css`
-
-### Contact Form Integration
-The contact form currently displays a success message. To integrate with a backend:
-
-1. Update the form submission handler in `script.js`
-2. Add your email service API or server endpoint
-3. Handle the response appropriately
-
-## Technologies Used
-
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- Vanilla JavaScript
-- Google Fonts (Poppins)
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Future Enhancements
-
-- [ ] Add blog section for English learning tips
-- [ ] Integrate payment system for class enrollment
-- [ ] Add student login portal
-- [ ] Include video testimonials
-- [ ] Add live chat support
-
-## License
-
-© 2025 FountWolff English. All rights reserved.
-
-## Contact
-
-For questions about the website or classes, visit [https://fountwolffenglish.com](https://fountwolffenglish.com)
-=======
-# FountWolff-English
-FountWolff page but better
->>>>>>> 34400156e50e35da08dd843ee501f2ba0e7a8b71
